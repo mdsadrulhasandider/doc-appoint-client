@@ -74,17 +74,17 @@ const Home = () => {
                             }}
                         >
                             <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 w-full space-y-6">
-                                <span className="inline-block bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse">
+                                <span className="inline-block bg-white/10 text-indigo-300 border border-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse">
                                     🏥 Instant Appointments
                                 </span>
                                 <h1 className="text-4xl md:text-6xl font-extrabold font-sans tracking-tight max-w-2xl leading-[1.1]">
-                                    Your Health is Our <span className="text-primary">First Priority</span>
+                                    Your Health is Our <span className="text-indigo-400">First Priority</span>
                                 </h1>
                                 <p className="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed">
                                     Browse experienced medical specialists, view schedules in real time, and book your secure slot in just a few clicks.
                                 </p>
                                 <div className="flex gap-4 pt-2">
-                                    <Link to="/appointments" className="btn btn-primary rounded-xl text-white font-semibold flex items-center gap-2 px-6 shadow-lg shadow-primary/20">
+                                    <Link to="/appointments" className="btn bg-indigo-600 hover:bg-indigo-700 border-none rounded-xl text-white font-semibold flex items-center gap-2 px-6 shadow-lg shadow-indigo-600/20">
                                         Find Doctors <FiArrowRight />
                                     </Link>
                                 </div>
@@ -101,11 +101,11 @@ const Home = () => {
                             }}
                         >
                             <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 w-full space-y-6">
-                                <span className="inline-block bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                <span className="inline-block bg-white/10 text-indigo-300 border border-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                                     🤝 Certified Doctors
                                 </span>
                                 <h1 className="text-4xl md:text-6xl font-extrabold font-sans tracking-tight max-w-2xl leading-[1.1]">
-                                    Consulting with <span className="text-primary">Top Specialists</span>
+                                    Consulting with <span className="text-indigo-400">Top Specialists</span>
                                 </h1>
                                 <p className="text-slate-300 text-sm md:text-base max-w-lg leading-relaxed">
                                     We verify every doctor to ensure premium healthcare for you and your family. Experienced practitioners in cardiology, neurology, and pediatrics.
