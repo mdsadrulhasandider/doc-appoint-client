@@ -23,7 +23,7 @@ const MyBookings = () => {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/bookings');
+                const response = await axios.get('/bookings');
                 setBookings(response.data);
             } catch (error) {
                 console.error("Error fetching user bookings:", error);
@@ -41,7 +41,7 @@ const MyBookings = () => {
         }
 
         try {
-            const response = await axios.delete(`http://localhost:5000/bookings/${bookingId}`);
+            const response = await axios.delete(`/bookings/${bookingId}`);
             if (response.data.success) {
                 // Instantly update UI by filtering out the deleted booking from React state (No refresh!)
                 setBookings(prevBookings => prevBookings.filter(b => b._id !== bookingId));
@@ -85,7 +85,7 @@ const MyBookings = () => {
         };
 
         try {
-            const response = await axios.put(`http://localhost:5000/bookings/${activeEditBooking._id}`, updatedData);
+            const response = await axios.put(`/bookings/${activeEditBooking._id}`, updatedData);
             if (response.data.success) {
                 // Instantly update UI by mapping the active booking edits to state (No refresh!)
                 setBookings(prevBookings => prevBookings.map(b => {

@@ -29,7 +29,7 @@ const AllAppointments = () => {
                 if (searchText) params.search = searchText;
                 if (sortOption) params.sort = sortOption;
 
-                const response = await axios.get('http://localhost:5000/doctors', { params });
+                const response = await axios.get('/doctors', { params });
                 setDoctors(response.data);
             } catch (error) {
                 console.error("Error fetching doctors:", error);

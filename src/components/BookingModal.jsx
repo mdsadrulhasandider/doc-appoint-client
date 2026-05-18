@@ -47,7 +47,7 @@ const BookingModal = ({ doctor, onClose, onBookingSuccess }) => {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/bookings', bookingData);
+            const response = await axios.post('/bookings', bookingData);
             if (response.data.success) {
                 toast.success('Appointment booked successfully!');
                 if (onBookingSuccess) onBookingSuccess();

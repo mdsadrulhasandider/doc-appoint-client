@@ -23,7 +23,7 @@ const DoctorDetails = () => {
     useEffect(() => {
         const fetchDoctor = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/doctors/${id}`);
+                const response = await axios.get(`/doctors/${id}`);
                 setDoctor(response.data);
             } catch (error) {
                 console.error("Error fetching doctor:", error);
