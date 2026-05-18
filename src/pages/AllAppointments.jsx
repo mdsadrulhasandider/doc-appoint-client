@@ -183,7 +183,7 @@ const AllAppointments = () => {
                                     <div className="card-actions">
                                         <button 
                                             onClick={() => handleViewDetails(doc.id || doc._id)}
-                                            className="btn btn-primary btn-block text-white rounded-xl font-semibold shadow-md shadow-primary/20 transition-all duration-300"
+                                            className="btn btn-block bg-indigo-600 hover:bg-indigo-700 border-none text-white rounded-xl font-semibold shadow-lg shadow-indigo-600/10 transition-all duration-300"
                                         >
                                             View Details
                                         </button>

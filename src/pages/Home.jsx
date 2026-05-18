@@ -111,7 +111,7 @@ const Home = () => {
                                     We verify every doctor to ensure premium healthcare for you and your family. Experienced practitioners in cardiology, neurology, and pediatrics.
                                 </p>
                                 <div className="flex gap-4 pt-2">
-                                    <Link to="/appointments" className="btn btn-primary rounded-xl text-white font-semibold flex items-center gap-2 px-6 shadow-lg shadow-primary/20">
+                                    <Link to="/appointments" className="btn bg-indigo-600 hover:bg-indigo-700 border-none rounded-xl text-white font-semibold flex items-center gap-2 px-6 shadow-lg shadow-indigo-600/20">
                                         Browse Specialties <FiArrowRight />
                                     </Link>
                                 </div>
@@ -217,7 +217,7 @@ const Home = () => {
                                     <div className="card-actions">
                                         <button 
                                             onClick={() => handleViewDetails(doc.id || doc._id)}
-                                            className="btn btn-primary btn-block text-white rounded-xl font-semibold shadow-md shadow-primary/20 transition-all duration-300"
+                                            className="btn btn-block bg-indigo-600 hover:bg-indigo-700 border-none text-white rounded-xl font-semibold shadow-lg shadow-indigo-600/10 transition-all duration-300"
                                         >
                                             View Details
                                         </button>
