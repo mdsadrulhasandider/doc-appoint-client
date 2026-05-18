@@ -117,23 +117,22 @@ const Navbar = () => {
                                         />
                                     </div>
                                 </label>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-lg bg-base-100 rounded-box w-60 border border-base-content/10">
-                                    <div className="px-2 py-2 border-b border-base-200 mb-2">
-                                        <p className="font-semibold text-base-content text-sm">{user.name}</p>
-                                        <p className="text-xs text-slate-500 truncate">{user.email}</p>
+                                <ul tabIndex={0} className="dropdown-content mt-3 z-[50] p-4 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-content/10 space-y-2">
+                                    <div className="px-2 pb-2 border-b border-base-200 mb-1">
+                                        <p className="font-extrabold text-base-content text-sm font-sans">{user.name}</p>
+                                        <p className="text-[10px] text-slate-400 font-semibold truncate mt-0.5">{user.email}</p>
                                     </div>
                                     <li>
-                                        <Link to="/dashboard/profile" className="py-2">My Profile</Link>
+                                        <Link to="/dashboard/profile" className="block py-2 px-3 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-primary/5 rounded-xl transition-all">My Profile</Link>
                                     </li>
                                     <li>
-                                        <Link to="/dashboard/my-bookings" className="py-2">My Bookings</Link>
+                                        <Link to="/dashboard/my-bookings" className="block py-2 px-3 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-primary/5 rounded-xl transition-all">My Bookings</Link>
                                     </li>
-                                    <div className="divider my-1"></div>
-                                    <li>
-                                        <button onClick={handleLogout} className="btn btn-primary btn-sm text-white mt-1 w-full min-h-0 h-9">
+                                    <div className="pt-2 border-t border-base-200">
+                                        <button onClick={handleLogout} className="w-full text-center py-2 bg-red-500 hover:bg-red-600 text-white text-xs font-bold rounded-xl transition-all shadow-sm">
                                             Logout
                                         </button>
-                                    </li>
+                                    </div>
                                 </ul>
                             </div>
                         </div>

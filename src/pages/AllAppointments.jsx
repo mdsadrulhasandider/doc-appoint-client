@@ -87,11 +87,11 @@ const AllAppointments = () => {
                             type="text" 
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
-                            className="input input-bordered w-full pl-10 text-sm focus:input-primary rounded-xl"
+                            className="input input-bordered w-full pl-10 text-sm focus:input-primary rounded-xl bg-base-100 text-base-content"
                             placeholder="Search by doctor name or specialty..."
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary rounded-xl text-white font-semibold text-sm px-6">
+                    <button type="submit" className="btn bg-indigo-600 hover:bg-indigo-700 text-white border-none rounded-xl font-bold text-sm px-6 transition-all shadow-sm">
                         Search
                     </button>
                 </form>
@@ -102,7 +102,7 @@ const AllAppointments = () => {
                     <select 
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value)}
-                        className="select select-bordered w-full md:w-56 text-sm font-semibold focus:select-primary rounded-xl"
+                        className="select select-bordered w-full md:w-56 text-sm font-semibold focus:select-primary rounded-xl bg-base-100 text-base-content"
                     >
                         <option value="">Default (Featured)</option>
                         <option value="fee-asc">Fee: Low to High</option>
