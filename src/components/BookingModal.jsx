@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -6,6 +7,7 @@ import { FiCalendar, FiClock, FiUser, FiPhone, FiAlertCircle } from 'react-icons
 
 const BookingModal = ({ doctor, onClose, onBookingSuccess }) => {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
     
     // Set up form state with realistic pre-fills or empty fields
     const [patientName, setPatientName] = useState(user?.name || '');
@@ -50,6 +52,7 @@ const BookingModal = ({ doctor, onClose, onBookingSuccess }) => {
                 toast.success('Appointment booked successfully!');
                 if (onBookingSuccess) onBookingSuccess();
                 onClose();
+                navigate('/dashboard/my-bookings'); // Redirect instantly to My Bookings dashboard page!
             }
         } catch (error) {
             toast.error(error.response?.data?.message || 'Failed to book appointment');
