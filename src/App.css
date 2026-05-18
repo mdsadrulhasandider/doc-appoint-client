@@ -1,0 +1,53 @@
+/* Reusable CSS Helper Transitions & Micro-Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-scale-up {
+    animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Swiper Customizations */
+.swiper-button-next,
+.swiper-button-prev {
+    color: hsl(var(--p)) !important;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet-active {
+    background: hsl(var(--p)) !important;
+    width: 24px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease;
+}
+
+/* Slow Spin Helper for Dark Mode Sun */
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spinSlow 12s linear infinite;
+}
