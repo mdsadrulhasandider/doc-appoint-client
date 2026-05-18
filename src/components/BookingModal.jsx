@@ -202,7 +202,7 @@ const BookingModal = ({ doctor, onClose, onBookingSuccess }) => {
                         </button>
                         <button 
                             type="submit" 
-                            className={`btn btn-primary rounded-xl text-sm font-semibold text-white px-6 shadow-md shadow-primary/20 ${loading ? 'loading' : ''}`}
+                            className={`btn bg-indigo-600 hover:bg-indigo-700 border-none rounded-xl text-sm font-semibold text-white px-6 shadow-lg shadow-indigo-600/10 ${loading ? 'loading' : ''}`}
                             disabled={loading}
                         >
                             {loading ? 'Booking...' : `Confirm - ৳${doctor.fee}`}

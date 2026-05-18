@@ -234,7 +234,7 @@ const DoctorDetails = () => {
                             />
                         </div>
 
-                        <button type="submit" className="btn btn-primary btn-block text-white font-semibold rounded-xl flex items-center justify-center gap-2">
+                        <button type="submit" className="btn bg-indigo-600 hover:bg-indigo-700 border-none btn-block text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/10">
                             Submit Review <FiSend />
                         </button>
                     </form>
