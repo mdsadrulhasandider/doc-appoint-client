@@ -190,7 +190,7 @@ const Register = () => {
                     {/* Submit Button */}
                     <button 
                         type="submit" 
-                        className={`btn btn-primary btn-block text-white rounded-xl font-semibold shadow-md shadow-primary/20 mt-2 ${loading ? 'loading' : ''}`}
+                        className={`btn btn-block bg-indigo-600 hover:bg-indigo-700 text-white border-none rounded-xl font-semibold shadow-lg shadow-indigo-600/10 mt-2 ${loading ? 'loading' : ''}`}
                         disabled={loading}
                     >
                         {loading ? 'Creating Account...' : 'Register'}
