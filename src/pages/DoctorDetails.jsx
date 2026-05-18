@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -10,6 +10,7 @@ import toast from 'react-hot-toast';
 const DoctorDetails = () => {
     const { id } = useParams();
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [doctor, setDoctor] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -165,9 +166,9 @@ const DoctorDetails = () => {
                             <div className="flex items-center space-x-2 bg-base-200 p-3 rounded-xl">
                                 <FiCalendar className="h-5 w-5 text-amber-500" />
                                 <div>
-                                    <span className="block text-[10px] text-slate-400 uppercase font-bold">Consultation Hours</span>
+                                    <span className="block text-[10px] text-slate-400 uppercase font-bold">Availability</span>
                                     <span className="text-base-content truncate block">
-                                        {doctor.availability?.join(', ')}
+                                        {(doctor.availability && doctor.availability.length > 0) ? doctor.availability.join(', ') : '09:00 AM - 12:00 PM, 04:00 PM - 07:00 PM'}
                                     </span>
                                 </div>
                             </div>
@@ -180,8 +181,15 @@ const DoctorDetails = () => {
                             <span className="text-3xl font-extrabold text-primary font-sans">৳{doctor.fee}</span>
                         </div>
                         <button 
-                            onClick={() => setIsModalOpen(true)}
-                            className="btn btn-primary text-white font-semibold rounded-xl px-12 shadow-lg shadow-primary/20 w-full sm:w-auto"
+                            onClick={() => {
+                                if (!user) {
+                                    toast.error('Please login first to book an appointment!', { icon: '🔒' });
+                                    navigate('/login', { state: { from: { pathname: `/doctor/${id}` } } });
+                                } else {
+                                    setIsModalOpen(true);
+                                }
+                            }}
+                            className="btn bg-indigo-600 hover:bg-indigo-700 border-none text-white font-semibold rounded-xl px-12 shadow-lg shadow-indigo-600/10 w-full sm:w-auto"
                         >
                             Book Appointment
                         </button>
